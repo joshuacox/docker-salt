@@ -2,7 +2,7 @@ import os
 
 # TODO: If salt-master is not in localhost, uncomment and change API URL
 # API_URL = 'https://localhost:8000'
-API_URL = 'http://localhost:49506'
+API_URL = 'http://localhost:8000'
 # TODO: Generate a random key with os.urandom(24)
 SECRET_KEY = os.urandom(24)
 

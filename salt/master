@@ -9,6 +9,11 @@ external_auth:
         - '@runner'
         - '@wheel'
 
+rest_cherrypy:
+  port: 8000
+  host: 127.0.0.1
+  disable_ssl: true
+
 halite:
   level: 'debug'
   server: 'cherrypy'
