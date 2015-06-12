@@ -62,7 +62,16 @@ RUN cd /docker && \
 #Add runit services
 ADD sv /etc/service 
 
+# Salt Pad
+RUN cd /opt && \
+    git clone https://github.com/tinyclues/saltpad.git
+
+RUN cd /opt/saltpad && \
+    pip install -r requirements.txt
+
+ADD ./local_settings.docker /opt/saltpad/saltpad/local_settings.py
+
 ENV HOME /root
 WORKDIR /root
-EXPOSE 22 4506 8080
+EXPOSE 22 4506 8080 5000
 
