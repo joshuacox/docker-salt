@@ -3,4 +3,4 @@
 #sv start socklog-unix || exit 1
 
 exec 2>&1
-exec /usr/bin/bash /saltpad-start.sh
+exec /bin/bash /saltpad-start.sh
