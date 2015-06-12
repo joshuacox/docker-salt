@@ -69,6 +69,7 @@ RUN cd /opt && \
 RUN cd /opt/saltpad && \
     pip install -r requirements.txt
 
+ADD ./saltpad-start.sh  /saltpad-start.sh
 ADD ./local_settings.docker /opt/saltpad/saltpad/local_settings.py
 
 ENV HOME /root
