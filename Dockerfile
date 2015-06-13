@@ -43,10 +43,9 @@ RUN cd /tmp && \
     cp master-minion.pem /etc/salt/pki/minion/minion.pem
 
 #Halite
-RUN apt-get install -y python-pip gcc python-dev libevent-dev
+RUN apt-get install -y python-pip gcc python-dev libevent-dev salt-api
 RUN pip install -U halite && \
-    pip install CherryPy && \
-    pip install salt-api
+    pip install CherryPy
 
 #Halite User
 RUN useradd admin && \
