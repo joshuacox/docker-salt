@@ -45,7 +45,8 @@ RUN cd /tmp && \
 #Halite
 RUN apt-get install -y python-pip gcc python-dev libevent-dev
 RUN pip install -U halite && \
-    pip install CherryPy
+    pip install CherryPy && \
+    pip install salt-api
 
 #Halite User
 RUN useradd admin && \
